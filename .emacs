@@ -41,7 +41,7 @@
   (let ((default-directory (concat dir "/")))
     (setq load-path (cons dir load-path))
     (normal-top-level-add-subdirs-to-load-path)))
-(my-add-subdirs-to-load-path "~/site-lisp")
+(my-add-subdirs-to-load-path "~/emacs/site-lisp")
 
 
 ;;--------------------------------------------------------------------
@@ -71,7 +71,10 @@
 ;; (require 'init-luolE-easy-keys)
 (require 'init-normal-config)
 (require 'init-editing-utils)
-(require 'init-color-theme)
+(if (equal window-system nil) 
+	()
+	(require 'init-color-theme)
+  )
 ;; (require 'init-lua-mode)
 ;; (require 'init-python-mode)
 ;; (require 'init-c-cpp-mode)
