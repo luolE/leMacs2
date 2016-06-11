@@ -4,7 +4,7 @@
 
 ;; (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory "~/site-lisp/yasnippet-snippets")
+(yas/load-directory "~/emacs/site-lisp/yasnippet-snippets")
 (setq yas/prompt-functions '(yas/dropdown-prompt))
 
 (yas/global-mode 1)
